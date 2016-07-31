@@ -1,16 +1,15 @@
 export default class MainView {
     constructor(controller, renderingContextFactory) {
         this.controller = controller;
-        this.renderingContextFactory = renderingContextFactory;
-        this.renderingContext = this.createRenderingContext();
+        this.renderingContext = this.createRenderingContext(renderingContextFactory);
     }
 
-    createRenderingContext() {
+    createRenderingContext(renderingContextFactory) {
         const domContainer = document.createElement('div');
 
         document.body.appendChild(domContainer);
 
-        const renderingContext = this.renderingContextFactory.createRenderingContext(domContainer);
+        const renderingContext = renderingContextFactory.createRenderingContext(domContainer);
 
         domContainer.appendChild(renderingContext.getDomElement());
 
