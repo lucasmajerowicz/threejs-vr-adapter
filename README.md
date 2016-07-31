@@ -1,4 +1,4 @@
-# WebVR Development Made Easy Using the Adapter Pattern in Three.js
+# Efficient WebVR Development Using the Adapter Pattern in Three.js
 ========
 
 ## Installation
